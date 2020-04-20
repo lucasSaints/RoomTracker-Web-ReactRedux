@@ -1,0 +1,63 @@
+@font-face{
+  font-family: ComicNeue;
+  src: url(ComicNeue-Italic.ttf);
+}
+
+body{background-color: #4f060c; box-sizing: border-box; padding:0; margin:0; overflow: hidden; font-family: Verdana, Geneva, Tahoma, sans-serif;}
+header{background-color: #8B2D33; width: 100%; font-family: Century Gothic; padding: 6px;}
+footer{background-color: #222222; width: 100%; min-height: 60px; max-height: 142px;  padding: 2.9%; color: #e0e3e4;}
+h2.titulo{color: #FBF9F0; font-size: 200%; float: left; margin-left: 32px; padding-bottom: 0.74%; font-weight: normal;}
+h2.titulo:hover{cursor: pointer;}
+div.corpo{margin: 0; padding: 0; height: 380px}
+div.coluna{float: left; overflow-y: auto; background-color: #2f0000; width: 15%; min-width: 162px; height: 100%; margin-right: 0.5%; box-sizing: border-box; padding: 0.25%;}
+div.coluna > * {margin: 1.1% 1.1% 1.1% 5%; min-width: 90%; text-align: left;}
+div.reunioeslista{margin: 0 auto 2% auto; overflow-y: auto; box-sizing: border-box; padding: 1%; height: 100%; }
+div.reuniao{background-color: #e0e3e4; overflow-y: hidden; display: inline-block; height: 26%; min-height: 116px; max-height: 35%; width: 24%; margin: 5px; min-width: 210px; border-radius: 6px;}
+div.reuniao:hover{height: auto; max-height: 120%;}
+h3.reuniaotitulo{margin: 4% 0 3.5% 5%; float: left; color: #0E0017; display: inline-block; max-width: 51%; font-size: 105%;} 
+h5.reuniaolocador{margin: 5% 5.5% 0 5%; float: right; text-align: right; font-weight: normal; font-style: italic; color: #777777; max-width: 33%; display: inline-block; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;}
+div.reuniaonota{margin: 0 4% 5% 4.5%; background-color: khaki; display: table-cell; line-height: 200%; padding: 6px; min-height: 12px; font-family: ComicNeue; font-size: 97%; float: left; max-width: 42%; overflow: hidden; text-overflow: clip; line-height: 1.1;}
+div.reuniaodata{color: #3D0911; font-size: 1.3vw; }
+div.reuniaohora{color: gray; font-size: 0.94vw; margin: 5% 0 5% 0}
+div.reuniaofloor{color: #0E0017; font-size: 0.94vw;}
+.filled{background-color: #492327; border-radius: 2px; color: #FBF9F0; border: none; padding: 12px; font-size: 120%; transition: All 0.2s; font-weight: bold; font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;}
+.filled:hover{background-color: #973f47;}
+button.borderless{background-color: #ffffff00;  border: none; color: #B29194; display: block; transition: all 0.25s;}
+button.borderless:hover{background-color: #ffffff19; color: #FBF9F0; border-left: #F82545 solid 2px;}
+.menutree{background-color: #ffffff00; border: none; color: #e0e3e4; display: block; clear: both; }
+.menutree > .menutree {white-space: normal;}
+.menutree > * {white-space: nowrap; width: max-content; min-width: 70%; text-align: left; font-size: 99%; margin-left: 7%;}
+.menutree * ::before{display: inline-block; margin-right: 5%; content: " ";}
+
+.link:hover{color: #f0df48; cursor: pointer;}
+
+div.popup{background-color: #662027; width: 37%; min-width: 216px; margin:4% auto 4% auto; vertical-align: middle;}
+div.popup form{padding: 4%; margin: auto; display: inline-block;}
+div.popup label{display: block; font-size: 75%; color: #FBF9F0; margin: 0 0 4px 4%; text-align: start;}
+div.popup input{display: block; font-size: 105%; padding: 2px; margin: 0 auto 0 auto}
+
+#snackbarra{visibility: hidden; background-color: #cdcdcd; border-radius: 3px; color: #0E0017; font-size:107%; width: 36%; min-width: 600px; position: fixed; bottom: 10%; left: 32%; text-align: center; padding: 16px}
+#snackbarra.sucesso{visibility: visible; color: #769c73; animation: fadein 0.5s, fadeout 0.5s 2.5s;}
+#snackbarra.erro{visibility: visible; color: #4f060c; animation: fadein 0.5s, shake 0.7s, fadeout 0.5s 2.5s;}
+
+@keyframes fadein {
+  from {bottom: 0; opacity: 0;}
+  to {bottom: 10%; opacity: 1;}
+}
+@keyframes fadeout {
+  from {bottom: 10%; opacity: 1;}
+  to {bottom: 0; opacity: 0;}
+}
+@keyframes shake {
+  0% { transform: translate(1px, 1px) rotate(0deg); }
+  10% { transform: translate(-1px, -2px) rotate(-1deg); }
+  20% { transform: translate(-3px, 0px) rotate(1deg); }
+  30% { transform: translate(3px, 2px) rotate(0deg); }
+  40% { transform: translate(1px, -1px) rotate(1deg); }
+  50% { transform: translate(-1px, 2px) rotate(-1deg); }
+  60% { transform: translate(-3px, 1px) rotate(0deg); }
+  70% { transform: translate(3px, 1px) rotate(-1deg); }
+  80% { transform: translate(-1px, -1px) rotate(1deg); }
+  90% { transform: translate(1px, 2px) rotate(0deg); }
+  100% { transform: translate(1px, -2px) rotate(-1deg); }
+}
